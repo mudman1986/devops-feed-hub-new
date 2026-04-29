@@ -1,42 +1,5 @@
 version: 2
 updates:
-  # Enable version updates for npm
-  - package-ecosystem: "npm"
-    directory: "/"
-    schedule:
-      interval: "weekly"
-    cooldown:
-      default-days: 7
-    groups:
-      npm-dependencies:
-        patterns:
-          - "*"
-    open-pull-requests-limit: 10
-    reviewers:
-      - "mudman1986"
-    labels:
-      - "dependencies"
-      - "automated"
-
-  # Enable version updates for pip
-  - package-ecosystem: "pip"
-    directory: "/"
-    schedule:
-      interval: "weekly"
-    cooldown:
-      default-days: 7
-    groups:
-      pip:
-        patterns:
-          - "*"
-    open-pull-requests-limit: 10
-    reviewers:
-      - "mudman1986"
-    labels:
-      - "dependencies"
-      - "automated"
-
-  # Enable version updates for GitHub Actions
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
@@ -53,23 +16,4 @@ updates:
     labels:
       - "dependencies"
       - "github-actions"
-      - "automated"
-
-  # Enable version updates for Docker
-  - package-ecosystem: "docker"
-    directory: "/"
-    schedule:
-      interval: "weekly"
-    cooldown:
-      default-days: 7
-    groups:
-      docker:
-        patterns:
-          - "*"
-    open-pull-requests-limit: 10
-    reviewers:
-      - "mudman1986"
-    labels:
-      - "dependencies"
-      - "docker"
       - "automated"
